@@ -21,6 +21,11 @@
             <groupId>com.beingmate.monitorcenter</groupId>
             <artifactId>monitor-biz</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>monitor-web</finalName>
