@@ -21,14 +21,14 @@
 	</appender>
 
 	<logger name="com.beingmate" level="INFO" />
-
 	<logger name="org.springframework" level="INFO" />
-
-	<logger name="org.mybatis" level="INFO" />
-	
+	<logger name="org.mybatis" level="DEBUG" />
+	<logger name="dao" level="debug" additivity="false">
+		<appender-ref ref="stdout"/>
+	</logger>
 	<root level="${log.root.level}">
 		<appender-ref ref="stdout" />
 		<appender-ref ref="file" />
 	</root>
-	
+
 </configuration>

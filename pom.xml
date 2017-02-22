@@ -13,6 +13,7 @@
         <module>monitor-dal</module>
         <module>monitor-web</module>
         <module>monitor-biz</module>
+        <module>common</module>
     </modules>
 
     <properties>
@@ -71,6 +72,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.beingmate.monitorcenter</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.beingmate.monitorcenter</groupId>
                 <artifactId>monitor-client</artifactId>
