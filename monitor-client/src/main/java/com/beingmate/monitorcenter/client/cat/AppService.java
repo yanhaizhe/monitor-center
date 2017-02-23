@@ -23,5 +23,5 @@ public interface AppService {
      *
      * @return
      */
-    PageInfo<ConfigDTO> findConfigDOS(Integer pageNo,Integer size);
+    PageInfo<ConfigDTO> findConfigDOS(Integer pageNo,Integer pageSize);
 }

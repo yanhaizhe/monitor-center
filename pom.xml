@@ -12,7 +12,7 @@
         <module>monitor-client</module>
         <module>monitor-dal</module>
         <module>monitor-web</module>
-        <module>monitor-biz</module>
+        <module>monitor-service</module>
         <module>common</module>
     </modules>
 
@@ -23,6 +23,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <mysql-version>6.0.4</mysql-version>
         <spring-version>4.3.3.RELEASE</spring-version>
+        <!--<spring-version>4.2.4.RELEASE</spring-version>-->
         <spring-redis-version>1.7.3.RELEASE</spring-redis-version>
         <jedis-version>2.9.0</jedis-version>
         <logback-version>1.1.9</logback-version>
@@ -85,7 +86,7 @@
             </dependency>
             <dependency>
                 <groupId>com.beingmate.monitorcenter</groupId>
-                <artifactId>monitor-biz</artifactId>
+                <artifactId>monitor-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

@@ -1,13 +1,19 @@
 package com.beingmate.monitorcenter.biz.app;
 
 import com.alibaba.fastjson.JSON;
+import com.beingmate.common.beancopier.BeanCopierUtils;
 import com.beingmate.monitorcenter.client.cat.AppService;
 import com.beingmate.monitorcenter.client.cat.dto.ConfigDTO;
 import com.beingmate.monitorcenter.dal.cat.dao.ConfigDOMapper;
+import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDO;
+import com.beingmate.monitorcenter.dal.cat.query.ConfigQuery;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by lenovo on 2017/2/20.
@@ -30,9 +36,14 @@ public class AppServiceImpl implements AppService {
     }
 
     @Override
-    public PageInfo<ConfigDTO> findConfigDOS(Integer pageNo,Integer size) {
-        PageHelper.startPage(pageNo, size);
-
-        return null;
+    public PageInfo<ConfigDTO> findConfigDOS(Integer pageNo,Integer pageSize) {
+        pageNo = pageNo == null?1:pageNo;
+        pageSize = pageSize == null?10:pageSize;
+        PageHelper.startPage(pageNo, pageSize);
+        List<ConfigDO> configQueries = configDOMapper.listConfigByName("剑魔");
+        List<ConfigDTO> configDTOS = new ArrayList<>();
+        BeanCopierUtils.copyListBean(configQueries,configDTOS,ConfigDTO.class);
+        PageInfo<ConfigDTO> pageInfo = new PageInfo<>(configDTOS);
+        return pageInfo;
     }
 }

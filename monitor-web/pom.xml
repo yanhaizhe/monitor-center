@@ -19,7 +19,7 @@
 
         <dependency>
             <groupId>com.beingmate.monitorcenter</groupId>
-            <artifactId>monitor-biz</artifactId>
+            <artifactId>monitor-service</artifactId>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
