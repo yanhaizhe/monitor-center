@@ -1,4 +1,4 @@
-package com.beingmate.monitorcenter.biz.app;
+package com.beingmate.monitorcenter.biz.cat;
 
 import com.alibaba.fastjson.JSON;
 import com.beingmate.common.beancopier.BeanCopierUtils;
@@ -6,7 +6,7 @@ import com.beingmate.monitorcenter.client.cat.AppService;
 import com.beingmate.monitorcenter.client.cat.dto.ConfigDTO;
 import com.beingmate.monitorcenter.dal.cat.dao.ConfigDOMapper;
 import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDO;
-import com.beingmate.monitorcenter.dal.cat.query.ConfigQuery;
+import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDOExample;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,10 @@ public class AppServiceImpl implements AppService {
         pageNo = pageNo == null?1:pageNo;
         pageSize = pageSize == null?10:pageSize;
         PageHelper.startPage(pageNo, pageSize);
-        List<ConfigDO> configQueries = configDOMapper.listConfigByName("剑魔");
+        ConfigDOExample example = new ConfigDOExample();
+        example.setOrderByClause("id, name");
+        example.createCriteria().andNameLike("剑魔");
+        List<ConfigDO> configQueries = configDOMapper.selectByExample(example);
         List<ConfigDTO> configDTOS = new ArrayList<>();
         BeanCopierUtils.copyListBean(configQueries,configDTOS,ConfigDTO.class);
         PageInfo<ConfigDTO> pageInfo = new PageInfo<>(configDTOS);

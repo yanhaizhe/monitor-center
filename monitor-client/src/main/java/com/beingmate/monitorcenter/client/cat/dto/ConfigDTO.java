@@ -1,8 +1,9 @@
 package com.beingmate.monitorcenter.client.cat.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ConfigDTO {
+public class ConfigDTO implements Serializable{
     private Integer id;
 
     private String name;
