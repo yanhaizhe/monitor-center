@@ -14,6 +14,7 @@
         <module>monitor-web</module>
         <module>monitor-service</module>
         <module>common</module>
+        <module>monitor-dp</module>
     </modules>
 
     <properties>
