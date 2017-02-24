@@ -26,6 +26,10 @@
             <artifactId>servlet-api</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <finalName>monitor-web</finalName>
