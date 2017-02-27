@@ -1,4 +1,4 @@
-package com.beingmate.monitorcenter.dp.pattern.fp.common.service;
+package com.beingmate.monitorcenter.dp.pattern.afp.common.service;
 
 /**
  * Created by lenovo on 2017/2/24.

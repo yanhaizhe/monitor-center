@@ -1,8 +1,8 @@
-package com.beingmate.monitorcenter.dp.pattern.fp.fmp;
+package com.beingmate.monitorcenter.dp.pattern.afp.fmp;
 
-import com.beingmate.monitorcenter.dp.pattern.fp.common.service.Sender;
-import com.beingmate.monitorcenter.dp.pattern.fp.common.service.impl.MailSender;
-import com.beingmate.monitorcenter.dp.pattern.fp.common.service.impl.SmsSender;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.service.Sender;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.service.impl.MailSender;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.service.impl.SmsSender;
 
 /**
  * 多工厂方法模式：

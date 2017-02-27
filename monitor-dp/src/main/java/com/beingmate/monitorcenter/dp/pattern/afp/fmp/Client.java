@@ -1,4 +1,4 @@
-package com.beingmate.monitorcenter.dp.pattern.fp.fmp;
+package com.beingmate.monitorcenter.dp.pattern.afp.fmp;
 
 /**
  * Created by lenovo on 2017/2/24.

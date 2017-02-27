@@ -1,4 +1,4 @@
-package com.beingmate.monitorcenter.dp.pattern.fp.common.enums;
+package com.beingmate.monitorcenter.dp.pattern.afp.common.enums;
 
 /**
  * Created by lenovo on 2017/2/24.

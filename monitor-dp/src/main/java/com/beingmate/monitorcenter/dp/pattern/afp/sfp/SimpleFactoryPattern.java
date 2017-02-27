@@ -1,9 +1,9 @@
-package com.beingmate.monitorcenter.dp.pattern.fp.sfp;
+package com.beingmate.monitorcenter.dp.pattern.afp.sfp;
 
-import com.beingmate.monitorcenter.dp.pattern.fp.common.enums.SendWayEnum;
-import com.beingmate.monitorcenter.dp.pattern.fp.common.service.Sender;
-import com.beingmate.monitorcenter.dp.pattern.fp.common.service.impl.MailSender;
-import com.beingmate.monitorcenter.dp.pattern.fp.common.service.impl.SmsSender;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.enums.SendWayEnum;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.service.Sender;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.service.impl.MailSender;
+import com.beingmate.monitorcenter.dp.pattern.afp.common.service.impl.SmsSender;
 
 /**
  * Created by lenovo on 2017/2/24.
