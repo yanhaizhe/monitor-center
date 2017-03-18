@@ -13,6 +13,5 @@ public class Client {
         Aircondition aircondition = abstractFactory.createAircondition();
         engine.draw();
         aircondition.fill();
-
     }
 }

@@ -15,6 +15,7 @@
         <module>monitor-service</module>
         <module>common</module>
         <module>monitor-dp</module>
+        <module>monitor-test</module>
     </modules>
 
     <properties>
