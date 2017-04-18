@@ -7,6 +7,7 @@ import java.util.Calendar;
 public class AppTest {
 
     public static void main(String[] args) {
+//        Thread
         Calendar c = Calendar.getInstance();
     }
 }

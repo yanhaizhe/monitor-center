@@ -7,9 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/monitor-client/monitor-client.iml" filepath="$PROJECT_DIR$/monitor-client/monitor-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitor-dal/monitor-dal.iml" filepath="$PROJECT_DIR$/monitor-dal/monitor-dal.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitor-dp/monitor-dp.iml" filepath="$PROJECT_DIR$/monitor-dp/monitor-dp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/monitor-netty/monitor-netty.iml" filepath="$PROJECT_DIR$/monitor-netty/monitor-netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitor-service/monitor-service.iml" filepath="$PROJECT_DIR$/monitor-service/monitor-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitor-test/monitor-test.iml" filepath="$PROJECT_DIR$/monitor-test/monitor-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/monitor-web/monitor-web.iml" filepath="$PROJECT_DIR$/monitor-web/monitor-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-sharding-jdbc-mybatis-plus/mybatis-plus/mybatis-plus.iml" filepath="$PROJECT_DIR$/../spring-sharding-jdbc-mybatis-plus/mybatis-plus/mybatis-plus.iml" />
     </modules>
   </component>
 </project>

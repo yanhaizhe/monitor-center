@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="huigujia-admin:war">
+    <output-path>$PROJECT_DIR$/../../project/meitianhui/huigujia/huigujia-admin/target</output-path>
+    <root id="archive" name="huigujia-admin.war">
+      <element id="artifact" artifact-name="huigujia-admin:war exploded" />
+    </root>
+  </artifact>
+</component>

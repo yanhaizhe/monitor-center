@@ -16,6 +16,7 @@
         <module>common</module>
         <module>monitor-dp</module>
         <module>monitor-test</module>
+        <module>monitor-netty</module>
     </modules>
 
     <properties>
@@ -43,6 +44,9 @@
         <commons-fileupload-version>1.3.2</commons-fileupload-version>
         <commons-beanutils-version>1.9.2</commons-beanutils-version>
         <junit-version>4.12</junit-version>
+        <aspectjweaver.version>1.8.8</aspectjweaver.version>
+
+        <shardingjdbc.version>1.4.0</shardingjdbc.version>
     </properties>
     <profiles>
         <profile>
@@ -120,6 +124,12 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-aop</artifactId>
                 <version>${spring-version}</version>
+            </dependency>
+            <!-- AOP -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectjweaver.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -262,6 +272,33 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-mongodb</artifactId>
                 <version>1.10.0.RELEASE</version>
+            </dependency>
+
+            <!-- sharding-jdbc -->
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>sharding-jdbc-core</artifactId>
+                <version>${shardingjdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>sharding-jdbc-transaction</artifactId>
+                <version>${shardingjdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>sharding-jdbc-config-yaml</artifactId>
+                <version>${shardingjdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>sharding-jdbc-config-spring</artifactId>
+                <version>${shardingjdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>sharding-jdbc-self-id-generator</artifactId>
+                <version>${shardingjdbc.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

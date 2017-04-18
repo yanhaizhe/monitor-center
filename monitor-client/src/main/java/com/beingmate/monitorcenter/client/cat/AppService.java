@@ -24,4 +24,10 @@ public interface AppService {
      * @return
      */
     PageInfo<ConfigDTO> findConfigDOS(Integer pageNo, Integer pageSize);
+
+    long insertD(ConfigDTO configDTO);
+
+    long updateD();
+
+    PageInfo<ConfigDTO> findConfigDOS1(Integer pageNo,Integer pageSize) ;
 }

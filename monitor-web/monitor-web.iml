@@ -16,7 +16,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -43,8 +43,9 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-test:4.3.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.4.1" level="project" />
@@ -52,7 +53,6 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.4" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.9" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.9" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.22" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.24" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
@@ -65,6 +65,57 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-mongodb:1.10.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.13.0.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.22" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-core:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.4" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.12" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.alibaba:jconsole:1.8.0">
+        <CLASSES>
+          <root url="jar://D:/devtool/Java/jdk1.8/lib/jconsole.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.alibaba:tools:1.8.0">
+        <CLASSES>
+          <root url="jar://D:/devtool/Java/jdk1.8/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.7" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
+    <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-transaction:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-transaction-storage:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:elastic-job-core:1.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.quartz-scheduler:quartz:2.2.1" level="project" />
+    <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-framework:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.16" level="project" />
+    <orderEntry type="library" name="Maven: jline:jline:0.9.94" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty:3.7.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.curator:curator-test:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-math:2.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-yaml:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-common:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:indy:2.4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.16" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-spring:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-self-id-generator:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" level="project" />
   </component>
 </module>

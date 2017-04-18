@@ -40,7 +40,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="config" domainObjectName="ConfigDO">
+        <table tableName="user_define_rule" domainObjectName="UserDefineRuleDO">
             <!--<generatedKey column="id" sqlStatement="mysql" identity="true"/>-->
         </table>
     </context>

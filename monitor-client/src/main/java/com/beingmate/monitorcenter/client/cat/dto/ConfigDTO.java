@@ -8,9 +8,9 @@ public class ConfigDTO implements Serializable{
 
     private String name;
 
-    private Date creationDate;
+    private Date creationDate = new Date();
 
-    private Date modifyDate;
+    private Date modifyDate = new Date();
 
     private String content;
 

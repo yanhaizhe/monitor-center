@@ -91,7 +91,7 @@
     </if>
   </select>
   <select id="selectByExample" parameterType="com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDOExample" resultMap="BaseResultMap">
-    select
+    /**/    select
     <if test="distinct">
       distinct
     </if>

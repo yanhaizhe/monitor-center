@@ -21,6 +21,28 @@
             <artifactId>monitor-dal</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.dangdang</groupId>
+            <artifactId>sharding-jdbc-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dangdang</groupId>
+            <artifactId>sharding-jdbc-transaction</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dangdang</groupId>
+            <artifactId>sharding-jdbc-config-yaml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dangdang</groupId>
+            <artifactId>sharding-jdbc-config-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dangdang</groupId>
+            <artifactId>sharding-jdbc-self-id-generator</artifactId>
+        </dependency>
+
     </dependencies>
 
 
