@@ -4,6 +4,7 @@ import com.beingmate.monitorcenter.client.cat.AppService;
 import com.beingmate.monitorcenter.client.cat.dto.ConfigDTO;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -12,10 +13,16 @@ import javax.servlet.http.HttpServletResponse;
  * Created by lenovo on 2017/2/20.
  */
 @RestController
-@RequestMapping("/app")
+@RequestMapping
 public class AppController {
     @Autowired
     private AppService appService;
+
+    @RequestMapping(value="/login",method=RequestMethod.GET)
+    public String loginForm(Model model){
+        model.addAttribute("user","user");
+        return "login";
+    }
 
     @RequestMapping(value = "/findString",produces = "application/json;charset=UTF-8")
     public String findString(){

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../../../beingmate/motherbuy/jeesite" />
     <file type="web" url="file://$PROJECT_DIR$/../../project/meitianhui/huigujia/huigujia-admin" />
     <file type="web" url="file://$PROJECT_DIR$/../../project/meitianhui/huigujia/huigujia-data" />
     <file type="web" url="file://$PROJECT_DIR$/../../project/meitianhui/huigujia/huigujia-gift" />
@@ -9,6 +10,19 @@
     <file type="web" url="file://$PROJECT_DIR$/../../project/meitianhui/huigujia/huigujia-web" />
     <file type="web" url="file://$PROJECT_DIR$/monitor-web" />
     <file type="web" url="file://$PROJECT_DIR$/../spring-sharding-jdbc-mybatis-plus/mybatis-plus" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-api/zheng-api-server" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-cms/zheng-cms-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-cms/zheng-cms-job" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-cms/zheng-cms-search" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-cms/zheng-cms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-demo/zheng-demo-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-oss/zheng-oss-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-oss/zheng-oss-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-pay/zheng-pay-admin" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-pay/zheng-pay-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-ucenter/zheng-ucenter-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-upms/zheng-upms-server" />
+    <file type="web" url="file://$PROJECT_DIR$/../zheng/zheng-wechat/zheng-wechat-mp/zheng-wechat-mp-admin" />
   </component>
   <component name="MarkdownProjectSettings">
     <PreviewSettings splitEditorLayout="SPLIT" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="0" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizePreviewPosition="true" highlightPreviewType="LINE" highlightFadeOut="5" highlightOnTyping="true" synchronizeSourcePosition="true">
@@ -78,27 +92,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring-sharding-jdbc-mybatis-plus/mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/../DataX/pom.xml" />
+        <option value="$PROJECT_DIR$/../zheng/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../beingmate/motherbuy/jeesite/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

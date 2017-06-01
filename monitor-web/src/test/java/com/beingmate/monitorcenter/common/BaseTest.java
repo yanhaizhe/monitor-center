@@ -9,5 +9,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:/spring/spring-context.xml","classpath*:/spring/spring-servlet.xml"})
+//@ContextConfiguration(classes = {HibernateConfiguration.class})
 public class BaseTest {
 }

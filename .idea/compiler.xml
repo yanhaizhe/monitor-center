@@ -6,19 +6,117 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="adswriter" />
         <module name="common" />
+        <module name="datax-common" />
+        <module name="datax-core" />
+        <module name="datax-transformer" />
+        <module name="drdsreader" />
+        <module name="drdswriter" />
+        <module name="ftpreader" />
+        <module name="ftpwriter" />
+        <module name="hbase094xreader" />
+        <module name="hbase094xwriter" />
+        <module name="hbase11xreader" />
+        <module name="hbase11xwriter" />
+        <module name="hbasereader" />
+        <module name="hbasewriter" />
+        <module name="jeesite" />
+        <module name="mongodbreader" />
+        <module name="mongodbwriter" />
         <module name="monitor-client" />
         <module name="monitor-dal" />
         <module name="monitor-dp" />
         <module name="monitor-netty" />
+        <module name="monitor-odps" />
         <module name="monitor-service" />
         <module name="monitor-test" />
         <module name="monitor-web" />
-        <module name="mybatis-plus" />
+        <module name="mysqlreader" />
+        <module name="mysqlwriter" />
+        <module name="ocswriter" />
+        <module name="odpsreader" />
+        <module name="odpswriter" />
+        <module name="oraclereader" />
+        <module name="oraclewriter" />
+        <module name="ossreader" />
+        <module name="osswriter" />
+        <module name="otsreader" />
+        <module name="otswriter" />
+        <module name="plugin-rdbms-util" />
+        <module name="plugin-unstructured-storage-util" />
+        <module name="postgresqlreader" />
+        <module name="postgresqlwriter" />
+        <module name="rdbmsreader" />
+        <module name="rdbmswriter" />
+        <module name="sqlserverreader" />
+        <module name="sqlserverwriter" />
+        <module name="streamreader" />
+        <module name="streamwriter" />
+        <module name="txtfilereader" />
+        <module name="txtfilewriter" />
+        <module name="zheng-admin" />
+        <module name="zheng-api-common" />
+        <module name="zheng-api-rpc-api" />
+        <module name="zheng-api-rpc-service" />
+        <module name="zheng-api-server" />
+        <module name="zheng-cms-admin" />
+        <module name="zheng-cms-common" />
+        <module name="zheng-cms-dao" />
+        <module name="zheng-cms-job" />
+        <module name="zheng-cms-rpc-api" />
+        <module name="zheng-cms-rpc-service" />
+        <module name="zheng-cms-search" />
+        <module name="zheng-cms-web" />
+        <module name="zheng-common" />
+        <module name="zheng-demo-rpc-api" />
+        <module name="zheng-demo-rpc-service" />
+        <module name="zheng-demo-web" />
+        <module name="zheng-oss-admin" />
+        <module name="zheng-oss-sdk" />
+        <module name="zheng-oss-web" />
+        <module name="zheng-pay-admin" />
+        <module name="zheng-pay-common" />
+        <module name="zheng-pay-dao" />
+        <module name="zheng-pay-rpc-api" />
+        <module name="zheng-pay-rpc-service" />
+        <module name="zheng-pay-sdk" />
+        <module name="zheng-pay-web" />
+        <module name="zheng-ucenter-common" />
+        <module name="zheng-ucenter-dao" />
+        <module name="zheng-ucenter-rpc-api" />
+        <module name="zheng-ucenter-rpc-service" />
+        <module name="zheng-ucenter-web" />
+        <module name="zheng-upms-client" />
+        <module name="zheng-upms-common" />
+        <module name="zheng-upms-dao" />
+        <module name="zheng-upms-rpc-api" />
+        <module name="zheng-upms-rpc-service" />
+        <module name="zheng-upms-server" />
+        <module name="zheng-wechat-mp-admin" />
+        <module name="zheng-wechat-mp-dao" />
+        <module name="zheng-wechat-mp-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="adswriter" target="1.6" />
       <module name="common" target="1.8" />
+      <module name="datax-all" target="1.6" />
+      <module name="datax-common" target="1.6" />
+      <module name="datax-core" target="1.6" />
+      <module name="datax-transformer" target="1.6" />
+      <module name="drdsreader" target="1.6" />
+      <module name="drdswriter" target="1.6" />
+      <module name="ftpreader" target="1.6" />
+      <module name="ftpwriter" target="1.6" />
+      <module name="hbase094xreader" target="1.6" />
+      <module name="hbase094xwriter" target="1.6" />
+      <module name="hbase11xreader" target="1.6" />
+      <module name="hbase11xwriter" target="1.6" />
+      <module name="hbasereader" target="1.6" />
+      <module name="hbasewriter" target="1.6" />
+      <module name="hdfsreader" target="1.6" />
+      <module name="hdfswriter" target="1.6" />
       <module name="huigujia" target="1.5" />
       <module name="huigujia-admin" target="1.7" />
       <module name="huigujia-common" target="1.7" />
@@ -27,15 +125,99 @@
       <module name="huigujia-hyd" target="1.7" />
       <module name="huigujia-task" target="1.7" />
       <module name="huigujia-web" target="1.7" />
+      <module name="jeesite" target="1.6" />
+      <module name="mongodbreader" target="1.6" />
+      <module name="mongodbwriter" target="1.6" />
       <module name="monitor-center" target="1.8" />
       <module name="monitor-client" target="1.8" />
       <module name="monitor-dal" target="1.8" />
       <module name="monitor-dp" target="1.8" />
       <module name="monitor-netty" target="1.8" />
+      <module name="monitor-odps" target="1.8" />
       <module name="monitor-service" target="1.8" />
       <module name="monitor-test" target="1.8" />
       <module name="monitor-web" target="1.8" />
       <module name="mybatis-plus" target="1.7" />
+      <module name="myclouder" target="1.8" />
+      <module name="mysqlreader" target="1.6" />
+      <module name="mysqlwriter" target="1.6" />
+      <module name="ocswriter" target="1.6" />
+      <module name="odpsreader" target="1.6" />
+      <module name="odpswriter" target="1.6" />
+      <module name="oraclereader" target="1.6" />
+      <module name="oraclewriter" target="1.6" />
+      <module name="ossreader" target="1.6" />
+      <module name="osswriter" target="1.6" />
+      <module name="otsreader" target="1.6" />
+      <module name="otswriter" target="1.6" />
+      <module name="plugin-rdbms-util" target="1.6" />
+      <module name="plugin-unstructured-storage-util" target="1.6" />
+      <module name="postgresqlreader" target="1.6" />
+      <module name="postgresqlwriter" target="1.6" />
+      <module name="rdbmsreader" target="1.6" />
+      <module name="rdbmswriter" target="1.6" />
+      <module name="sqlserverreader" target="1.6" />
+      <module name="sqlserverwriter" target="1.6" />
+      <module name="streamreader" target="1.6" />
+      <module name="streamwriter" target="1.6" />
+      <module name="txtfilereader" target="1.6" />
+      <module name="txtfilewriter" target="1.6" />
+      <module name="zheng" target="1.7" />
+      <module name="zheng-admin" target="1.7" />
+      <module name="zheng-api" target="1.7" />
+      <module name="zheng-api-common" target="1.7" />
+      <module name="zheng-api-rpc-api" target="1.7" />
+      <module name="zheng-api-rpc-service" target="1.7" />
+      <module name="zheng-api-server" target="1.7" />
+      <module name="zheng-cms" target="1.7" />
+      <module name="zheng-cms-admin" target="1.7" />
+      <module name="zheng-cms-common" target="1.7" />
+      <module name="zheng-cms-dao" target="1.7" />
+      <module name="zheng-cms-job" target="1.7" />
+      <module name="zheng-cms-rpc-api" target="1.7" />
+      <module name="zheng-cms-rpc-service" target="1.7" />
+      <module name="zheng-cms-search" target="1.7" />
+      <module name="zheng-cms-web" target="1.7" />
+      <module name="zheng-common" target="1.7" />
+      <module name="zheng-demo" target="1.7" />
+      <module name="zheng-demo-rpc-api" target="1.7" />
+      <module name="zheng-demo-rpc-service" target="1.7" />
+      <module name="zheng-demo-web" target="1.7" />
+      <module name="zheng-eoms" target="1.7" />
+      <module name="zheng-im" target="1.7" />
+      <module name="zheng-oa" target="1.7" />
+      <module name="zheng-oss" target="1.7" />
+      <module name="zheng-oss-admin" target="1.7" />
+      <module name="zheng-oss-sdk" target="1.7" />
+      <module name="zheng-oss-web" target="1.7" />
+      <module name="zheng-pay" target="1.7" />
+      <module name="zheng-pay-admin" target="1.7" />
+      <module name="zheng-pay-common" target="1.7" />
+      <module name="zheng-pay-dao" target="1.7" />
+      <module name="zheng-pay-rpc-api" target="1.7" />
+      <module name="zheng-pay-rpc-service" target="1.7" />
+      <module name="zheng-pay-sdk" target="1.7" />
+      <module name="zheng-pay-web" target="1.7" />
+      <module name="zheng-shop" target="1.7" />
+      <module name="zheng-ucenter" target="1.7" />
+      <module name="zheng-ucenter-common" target="1.7" />
+      <module name="zheng-ucenter-dao" target="1.7" />
+      <module name="zheng-ucenter-rpc-api" target="1.7" />
+      <module name="zheng-ucenter-rpc-service" target="1.7" />
+      <module name="zheng-ucenter-web" target="1.7" />
+      <module name="zheng-upms" target="1.7" />
+      <module name="zheng-upms-client" target="1.7" />
+      <module name="zheng-upms-common" target="1.7" />
+      <module name="zheng-upms-dao" target="1.7" />
+      <module name="zheng-upms-rpc-api" target="1.7" />
+      <module name="zheng-upms-rpc-service" target="1.7" />
+      <module name="zheng-upms-server" target="1.7" />
+      <module name="zheng-wechat" target="1.7" />
+      <module name="zheng-wechat-app" target="1.7" />
+      <module name="zheng-wechat-mp" target="1.7" />
+      <module name="zheng-wechat-mp-admin" target="1.7" />
+      <module name="zheng-wechat-mp-dao" target="1.7" />
+      <module name="zheng-wechat-mp-service" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

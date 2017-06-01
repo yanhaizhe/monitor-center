@@ -17,6 +17,7 @@
         <module>monitor-dp</module>
         <module>monitor-test</module>
         <module>monitor-netty</module>
+        <module>monitor-odps</module>
     </modules>
 
     <properties>
@@ -45,8 +46,11 @@
         <commons-beanutils-version>1.9.2</commons-beanutils-version>
         <junit-version>4.12</junit-version>
         <aspectjweaver.version>1.8.8</aspectjweaver.version>
+        <shiro.version>1.2.3</shiro.version>
 
-        <shardingjdbc.version>1.4.0</shardingjdbc.version>
+
+
+        <shardingjdbc.version>1.4.1</shardingjdbc.version>
     </properties>
     <profiles>
         <profile>
@@ -300,6 +304,40 @@
                 <artifactId>sharding-jdbc-self-id-generator</artifactId>
                 <version>${shardingjdbc.version}</version>
             </dependency>
+
+            <!-- SECURITY begin -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-cas</artifactId>
+                <version>${shiro.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-ehcache</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <!-- SECURITY end -->
         </dependencies>
     </dependencyManagement>
 

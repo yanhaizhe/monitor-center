@@ -47,7 +47,7 @@
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.13.0.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.22" level="project" />
     <orderEntry type="module" module-name="monitor-client" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-core:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-core:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.4" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.1" level="project" />
@@ -73,8 +73,8 @@
     <orderEntry type="library" name="Maven: cglib:cglib:3.1" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:4.2" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-transaction:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-transaction-storage:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-transaction:1.4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-transaction-storage:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.6.1" level="project" />
     <orderEntry type="library" name="Maven: com.dangdang:elastic-job-core:1.0.6" level="project" />
     <orderEntry type="library" name="Maven: org.quartz-scheduler:quartz:2.2.1" level="project" />
@@ -91,11 +91,11 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-math:2.2" level="project" />
     <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.6" level="project" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-yaml:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-common:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-yaml:1.4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-common:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:indy:2.4.5" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.16" level="project" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-spring:1.4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-self-id-generator:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-config-spring:1.4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:sharding-jdbc-self-id-generator:1.4.1" level="project" />
   </component>
 </module>

@@ -45,23 +45,20 @@
           <element id="library" level="project" name="Maven: org.apache.commons:commons-dbcp2:2.1.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.4.2" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
-          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
-          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
           <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.14.3" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.10.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.13.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.22" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-core:1.4.0" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-core:1.4.1" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.4" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.1" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.12" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
           <element id="library" level="project" name="Maven: cglib:cglib:3.1" />
           <element id="library" level="project" name="Maven: org.ow2.asm:asm:4.2" />
           <element id="library" level="project" name="Maven: io.dropwizard.metrics:metrics-core:3.1.0" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-transaction:1.4.0" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-transaction-storage:1.4.0" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-transaction:1.4.1" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-transaction-storage:1.4.1" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.6.1" />
           <element id="library" level="project" name="Maven: com.dangdang:elastic-job-core:1.0.6" />
           <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.2.1" />
@@ -78,13 +75,23 @@
           <element id="library" level="project" name="Maven: org.apache.commons:commons-math:2.2" />
           <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.6" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-yaml:1.4.0" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-common:1.4.0" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-yaml:1.4.1" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-common:1.4.1" />
           <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:indy:2.4.5" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.16" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-spring:1.4.0" />
-          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-self-id-generator:1.4.0" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-config-spring:1.4.1" />
+          <element id="library" level="project" name="Maven: com.dangdang:sharding-jdbc-self-id-generator:1.4.1" />
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:3.0-alpha-1" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.2" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.2.3" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-cas:1.2.3" />
+          <element id="library" level="project" name="Maven: org.jasig.cas.client:cas-client-core:3.2.1" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.3" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-ehcache:1.2.3" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.5.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
