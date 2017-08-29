@@ -11,6 +11,6 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
         DemoService demoService = context.getBean(DemoService.class);
         demoService.outputResult();
-        
+
     }
 }

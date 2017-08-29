@@ -10,13 +10,13 @@ import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDO;
 import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDOExample;
 import com.beingmate.monitorcenter.dal.cat.dataobject.UserDefineRuleDO;
 import com.dangdang.ddframe.rdb.sharding.api.HintManager;
+import com.dangdang.ddframe.rdb.sharding.api.rule.DataSourceRule;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by lenovo on 2017/2/20.
@@ -51,10 +51,23 @@ public class AppServiceImpl implements AppService {
         example.createCriteria().andNameLike("%剑魔%");
         HintManager.getInstance().setMasterRouteOnly();
         List<ConfigDO> configQueries = configDOMapper.selectByExample(example);
+//        Map<String, Object> param = new HashMap<>();
+//        List<String> re = new ArrayList<>();
+//        re.add("2");
+//        re.add("1");
+//        param.put("contentList", re);
+////        param.put("content", "111111");
+//        List<ConfigDO> configQueries = configDOMapper.selectByExampleP(param);
         List<ConfigDTO> configDTOS = new ArrayList<>();
         BeanCopierUtils.copyListBean(configQueries,configDTOS,ConfigDTO.class);
         PageInfo<ConfigDTO> pageInfo = new PageInfo<>(configDTOS);
         return pageInfo;
+    }
+
+    @Override
+    public ConfigDTO findOne(Integer id) {
+        HintManager.getInstance().setMasterRouteOnly();
+        return configDOMapper.selectByPrimaryKey(id);
     }
 
     @Override
@@ -63,7 +76,11 @@ public class AppServiceImpl implements AppService {
         BeanCopierUtils.copyProperties(configDTO, configDO);
         configDOMapper.insert(configDO);
         UserDefineRuleDO userDefineRuleDO = new UserDefineRuleDO();
+        userDefineRuleDO.setId(1);
+        userDefineRuleDO.setCreationDate(new Date());
+        userDefineRuleDO.setContent("```1122343445");
         userDefineRuleDOMapper.insert(userDefineRuleDO);
+//        DataSourceRule dataSourceRule = new DataSourceRule(dataSourceMap,"datasource_0")
         return 1L;
     }
 

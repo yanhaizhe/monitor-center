@@ -19,11 +19,15 @@ public interface AppService {
      */
     String findConfig();
 
+
+
     /**
      *
      * @return
      */
     PageInfo<ConfigDTO> findConfigDOS(Integer pageNo, Integer pageSize);
+
+    ConfigDTO findOne(Integer id);
 
     long insertD(ConfigDTO configDTO);
 

@@ -3,6 +3,8 @@ package com.beingmate.monitorcenter.dal.cat.dao;
 import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDO;
 import com.beingmate.monitorcenter.dal.cat.dataobject.ConfigDOExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface ConfigDOMapper {
@@ -19,6 +21,8 @@ public interface ConfigDOMapper {
     List<ConfigDO> selectByExampleWithBLOBs(ConfigDOExample example);
 
     List<ConfigDO> selectByExample(ConfigDOExample example);
+
+    List<ConfigDO> selectByExampleP(Map<String, Object> param);
 
     ConfigDO selectByPrimaryKey(Integer id);
 

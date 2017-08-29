@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	   xmlns:rdb="http://www.dangdang.com/schema/ddframe/rdb"
-	   xmlns:aop="http://www.springframework.org/schema/aop"
-	   xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:rdb="http://www.dangdang.com/schema/ddframe/rdb"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
                         http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
                         http://www.springframework.org/schema/context  
                         http://www.springframework.org/schema/context/spring-context-4.0.xsd
@@ -15,116 +15,149 @@
        http://www.springframework.org/schema/tx/spring-tx.xsd
                          http://www.dangdang.com/schema/ddframe/rdb
        http://www.dangdang.com/schema/ddframe/rdb/rdb.xsd">
-	<!-- 自动扫描 -->
-	<context:component-scan base-package="com.beingmate.monitorcenter.dal" />
+    <!-- 自动扫描 -->
+    <context:component-scan base-package="com.beingmate.monitorcenter.dal"/>
 
 
-	<bean name="parentDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
+    <bean name="parentDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
 
-		<property name="driverClassName" value="${jdbc.driver}" />
-		<property name="maxTotal" value="${jdbc.maxTotal}" />
-		<property name="initialSize" value="${jdbc.initialSize}" />
-		<property name="maxIdle" value="${jdbc.maxIdle}" />
-		<property name="minIdle" value="${jdbc.minIdle}" />
-		<property name="maxWaitMillis" value="${jdbc.maxWaitMillis}" />
-	</bean>
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="maxTotal" value="${jdbc.maxTotal}"/>
+        <property name="initialSize" value="${jdbc.initialSize}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="minIdle" value="${jdbc.minIdle}"/>
+        <property name="maxWaitMillis" value="${jdbc.maxWaitMillis}"/>
+    </bean>
 
 
-	<!--数据源0 -->
-	<bean id="ds_0" parent="parentDataSource">
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
-	</bean>
+    <!--数据源0 -->
+    <bean id="dbtbl_0_master" parent="parentDataSource">
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
 
-	<!--数据源1 -->
-	<bean id="ds_1" parent="parentDataSource">
-		<property name="url" value="${jdbc.url_1}" />
-		<property name="username" value="${jdbc.username_1}" />
-		<property name="password" value="${jdbc.password_1}" />
-	</bean>
-	<!--数据源2 -->
-	<bean id="ds_2" parent="parentDataSource">
-		<property name="url" value="${jdbc.url_2}" />
-		<property name="username" value="${jdbc.username_2}" />
-		<property name="password" value="${jdbc.password_2}" />
-	</bean>
+    <!--数据源1 -->
+    <bean id="dbtbl_0_slave_0" parent="parentDataSource">
+        <property name="url" value="${jdbc.url_1}"/>
+        <property name="username" value="${jdbc.username_1}"/>
+        <property name="password" value="${jdbc.password_1}"/>
+    </bean>
+    <!--数据源2 -->
+    <bean id="dbtbl_0_slave_1" parent="parentDataSource">
+        <property name="url" value="${jdbc.url_2}"/>
+        <property name="username" value="${jdbc.username_2}"/>
+        <property name="password" value="${jdbc.password_2}"/>
+    </bean>
 
-	<!--<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"-->
-		<!--destroy-method="close">-->
-		<!--<property name="driverClassName" value="${jdbc.driver}" />-->
-		<!--<property name="url" value="${jdbc.url}" />-->
-		<!--<property name="username" value="${jdbc.username}" />-->
-		<!--<property name="password" value="${jdbc.password}" />-->
-		<!--<property name="maxTotal" value="${jdbc.maxTotal}" />-->
-		<!--<property name="initialSize" value="${jdbc.initialSize}" />-->
-		<!--<property name="maxIdle" value="${jdbc.maxIdle}" />-->
-		<!--<property name="minIdle" value="${jdbc.minIdle}" />-->
-		<!--<property name="maxWaitMillis" value="${jdbc.maxWaitMillis}" />-->
-		<!--&lt;!&ndash;<property name="validationQuery" value="${jdbc.validationQuery}" />&ndash;&gt;-->
-	<!--</bean>-->
 
-	<rdb:master-slave-data-source id="dbtbl_0" master-data-source-ref="ds_0" slave-data-sources-ref="ds_1, ds_2" />
-	<rdb:data-source id="shardingDataSource">
-		<rdb:sharding-rule data-sources="dbtbl_0">
-			<rdb:table-rules>
-				<rdb:table-rule logic-table="*" />
-			</rdb:table-rules>
-		</rdb:sharding-rule>
-	</rdb:data-source>
+    <!--==================================================-->
 
-	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="shardingDataSource" />
-		<!-- 自动扫描mapping.xml文件 -->
-		<property name="mapperLocations" value="classpath:mybatis/mapping/*/*.xml"></property>
-		<!-- 加载mybatis的全局配置文件 -->
-		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
-	</bean>
+    <!--数据源0 -->
+    <bean id="dbtbl_1_master" parent="parentDataSource">
+        <property name="url" value="${jdbc.url_1_master}"/>
+        <property name="username" value="${jdbc.username_1_master}"/>
+        <property name="password" value="${jdbc.password_1_master}"/>
+    </bean>
 
-	<!-- DAO接口所在包名，Spring会自动查找其下的类 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.beingmate.monitorcenter.dal" />
-		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-	</bean>
+    <!--数据源1 -->
+    <bean id="dbtbl_1_slave_0" parent="parentDataSource">
+        <property name="url" value="${jdbc.url_1_slave_0}"/>
+        <property name="username" value="${jdbc.username_1_slave_0}"/>
+        <property name="password" value="${jdbc.password_1_slave_0}"/>
+    </bean>
+    <!--数据源2 -->
+    <bean id="dbtbl_1_slave_1" parent="parentDataSource">
+        <property name="url" value="${jdbc.url_1_slave_1}"/>
+        <property name="username" value="${jdbc.username_1_slave_1}"/>
+        <property name="password" value="${jdbc.password_1_slave_1}"/>
+    </bean>
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"-->
+    <!--destroy-method="close">-->
+    <!--<property name="driverClassName" value="${jdbc.driver}" />-->
+    <!--<property name="url" value="${jdbc.url}" />-->
+    <!--<property name="username" value="${jdbc.username}" />-->
+    <!--<property name="password" value="${jdbc.password}" />-->
+    <!--<property name="maxTotal" value="${jdbc.maxTotal}" />-->
+    <!--<property name="initialSize" value="${jdbc.initialSize}" />-->
+    <!--<property name="maxIdle" value="${jdbc.maxIdle}" />-->
+    <!--<property name="minIdle" value="${jdbc.minIdle}" />-->
+    <!--<property name="maxWaitMillis" value="${jdbc.maxWaitMillis}" />-->
+    <!--&lt;!&ndash;<property name="validationQuery" value="${jdbc.validationQuery}" />&ndash;&gt;-->
+    <!--</bean>-->
 
-	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
-	<bean id="transactionManager"
-		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="shardingDataSource" />
-	</bean>
+    <rdb:master-slave-data-source id="dbtbl_0" master-data-source-ref="dbtbl_0_master"
+                                  slave-data-sources-ref="dbtbl_0_slave_0, dbtbl_0_slave_1"/>
+    <rdb:master-slave-data-source id="dbtbl_1" master-data-source-ref="dbtbl_1_master"
+                                  slave-data-sources-ref="dbtbl_1_slave_0, dbtbl_1_slave_1"/>
+    <!-- 通过rdb:strategy和rdb:data-source继续构建分片数据源 -->
+    <rdb:strategy id="databaseStrategy" sharding-columns="creation_date" algorithm-class="com.beingmate.monitorcenter.rule.MyDatabaseRule"/>
+                  <!--algorithm-expression="dbtbl_${id.longValue() % 2}"/>-->
+    <rdb:strategy id="orderTableStrategy" sharding-columns="id" algorithm-class="com.beingmate.monitorcenter.rule.MyTableRule"/>
+                  <!--algorithm-expression="config_${Math.floorMod(Math.floorDiv(id.longValue() ,2L),2L)}"/>-->
 
-	<!-- 事务管理 属性 -->
-	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="append*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="save*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="update*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="modify*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="edit*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="insert*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="delete*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="remove*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
-			<tx:method name="repair" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+    <rdb:data-source id="shardingDataSource">
+        <rdb:sharding-rule data-sources="dbtbl_0, dbtbl_1" default-data-source="dbtbl_0">
+            <rdb:table-rules>
+                <rdb:table-rule logic-table="config" actual-tables="config_${0..1}" database-strategy="databaseStrategy"
+                                table-strategy="orderTableStrategy"/>
+                <rdb:table-rule logic-table="*"/>
+            </rdb:table-rules>
+        </rdb:sharding-rule>
+    </rdb:data-source>
 
-			<tx:method name="get*" propagation="REQUIRED" read-only="true"/>
-			<tx:method name="find*" propagation="REQUIRED" read-only="true"/>
-			<tx:method name="load*" propagation="REQUIRED" read-only="true"/>
-			<tx:method name="search*" propagation="REQUIRED" read-only="true"/>
-			<tx:method name="datagrid*" propagation="REQUIRED" read-only="true"/>
+    <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="shardingDataSource"/>
+        <!-- 自动扫描mapping.xml文件 -->
+        <property name="mapperLocations" value="classpath:mybatis/mapping/*/*.xml"></property>
+        <!-- 加载mybatis的全局配置文件 -->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+    </bean>
 
-			<tx:method name="*" propagation="REQUIRED" read-only="true"/>
-		</tx:attributes>
-	</tx:advice>
+    <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.beingmate.monitorcenter.dal"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+    </bean>
 
-	<!-- 配置切面 -->
-	<aop:config>
-		<aop:pointcut id="transactionPointcut" expression="execution(* com.beingmate.monitorcenter.biz.*..*(..))"/>
-		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice"/>
-	</aop:config>
+    <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="shardingDataSource"/>
+    </bean>
+
+    <!-- 事务管理 属性 -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="append*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="save*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="update*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="modify*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="edit*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="insert*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="delete*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="remove*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+            <tx:method name="repair" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+
+            <tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="load*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="search*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="datagrid*" propagation="REQUIRED" read-only="true"/>
+
+            <tx:method name="*" propagation="REQUIRED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 配置切面 -->
+    <aop:config>
+        <aop:pointcut id="transactionPointcut" expression="execution(* com.beingmate.monitorcenter.biz.*..*(..))"/>
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice"/>
+    </aop:config>
 
 </beans>
